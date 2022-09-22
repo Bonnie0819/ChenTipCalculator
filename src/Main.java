@@ -9,7 +9,7 @@ import java.text.DecimalFormat;
         System.out.println("Welcome to TipCalculator!");
 
         System.out.print("How many people are in your group?: ");
-        int number = scan.nextInt();
+        int groupTotal = scan.nextInt();
         scan.nextLine();
 
         System.out.println("What is the tip percentage? (0-100):");
@@ -17,15 +17,16 @@ import java.text.DecimalFormat;
         scan.nextLine();
 
 
+        System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
+        double priceOfItem = scan.nextDouble();
+
+        while (priceOfItem != -1) {
+            System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
+            priceOfItem = scan.nextDouble();
+        }
 
 
-//        // the while loop begins and repeats as
-//        // long as the condition is TRUE; as soon
-//        // as the condition becomes FALSE, it stops
-//        while (number % 2 != 0) {
-//            System.out.print("No silly, i said EVEN not odd! Try again: ");
-//            number = scan.nextInt();
-//        }
+
 
 
     }
