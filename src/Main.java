@@ -17,6 +17,7 @@ import java.text.DecimalFormat;
             int tipPercent = scan.nextInt();
             scan.nextLine();
 
+
         //Asks for the price of item
             System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
             double priceOfItem = scan.nextDouble();
@@ -38,10 +39,16 @@ import java.text.DecimalFormat;
 
             }
 
+            //variables for receipt
+            //double billWithTip = billBeforeTip * ;
 
             //Receipt
             System.out.println("____________________________");
             System.out.println(billBeforeTip);
+            System.out.println(tipPercent);
+
+
+
 
         }
     }
