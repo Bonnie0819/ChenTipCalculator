@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
             scan.nextLine();
 
 
-        //Asks for the price of item
+        //Asks for the price of an item
             System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
             double priceOfItem = scan.nextDouble();
             scan.nextLine();
@@ -26,7 +26,7 @@ import java.text.DecimalFormat;
             billBeforeTip = billBeforeTip + priceOfItem;
 
 
-        //Use of while loop to track prices of items
+        //Use of while loop to track prices of items bought by user
             while (priceOfItem != -1) {
                 System.out.println("Enter cost in dollars and cents ex: 4.50  (-1 to end):");
                 priceOfItem = scan.nextDouble();
@@ -39,13 +39,17 @@ import java.text.DecimalFormat;
 
             }
 
-            //variables for receipt
-            //double billWithTip = billBeforeTip * ;
+
 
             //Receipt
-            System.out.println("____________________________");
-            System.out.println(billBeforeTip);
-            System.out.println(tipPercent);
+            System.out.println("___________________________________");
+            System.out.println("Total Bill Before Tip: " + billBeforeTip);
+            System.out.println("Tip Percentage: " + tipPercent);
+
+            double tip = (tipPercent * .01 * billBeforeTip);
+            String roundedTip = formatter.format(tip);
+            System.out.println(roundedTip);
+
 
 
 
