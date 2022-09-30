@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
             Scanner scan = new Scanner(System.in);
             DecimalFormat formatter = new DecimalFormat("#.##");
 
-        //Welcoming Statement/Questions for User
+        // Welcoming Statement/Questions for User
             System.out.println("Welcome to TipCalculator!");
 
             System.out.print("How many people are in your group?: ");
