@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
             Scanner scan = new Scanner(System.in);
             DecimalFormat formatter = new DecimalFormat("#.##");
 
-        //Welcoming Statement
+        //Welcoming Statements
             System.out.println("Welcome to TipCalculator!");
 
             System.out.print("How many people are in your group?: ");
@@ -41,16 +41,35 @@ import java.text.DecimalFormat;
 
 
 
+
+        //Variables For Receipt
+
+            //Total Tip
+            double tip = (tipPercent * .01 * billBeforeTip);
+            String roundedTip = formatter.format(tip);
+
+            //Total Price with Tip
+            double totalPrice = billBeforeTip + Double.parseDouble(roundedTip);
+
+            //Per Person Cost Before Tip
+            double personCostBeforeTip = billBeforeTip/groupTotal;
+            String roundedCostPerPersonBeforeTip = formatter.format(billBeforeTip);
+
+            //Tip Per Person
+            double tipPerPerson = Double.parseDouble(roundedTip)/groupTotal;
+
+            //Total Cost Per Person
+            double totalCostPerPerson = totalPrice/groupTotal;
+
             //Receipt
             System.out.println("___________________________________");
             System.out.println("Total Bill Before Tip: " + billBeforeTip);
             System.out.println("Tip Percentage: " + tipPercent);
-
-            double tip = (tipPercent * .01 * billBeforeTip);
-            String roundedTip = formatter.format(tip);
-            System.out.println(roundedTip);
-
-
+            System.out.println("Total Tip: " + roundedTip);
+            System.out.println("Total Bill With Tip: " + totalPrice);
+            System.out.println("Per Person Cost Before Tip: " + roundedCostPerPersonBeforeTip);
+            System.out.println("Tip Per Person: " + tipPerPerson);
+            System.out.println("Total Cost Per Person: " + totalCostPerPerson);
 
 
 
